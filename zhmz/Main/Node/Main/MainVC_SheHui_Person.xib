@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVC_SheHui_Person">
+            <connections>
+                <outlet property="tableView" destination="f3i-da-8bc" id="1Un-TQ-laa"/>
+                <outlet property="view" destination="Hqm-NI-LUz" id="UNf-aB-3PB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Hqm-NI-LUz">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="70" sectionHeaderHeight="1" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3i-da-8bc">
+                    <rect key="frame" x="0.0" y="20" width="375" height="350"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="350" id="LLS-XI-iXE"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="l8n-xy-l3A"/>
+                        <outlet property="delegate" destination="-1" id="fQq-am-CS1"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.92156862750000001" green="0.92549019610000005" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="f3i-da-8bc" firstAttribute="leading" secondItem="yG8-Au-lOU" secondAttribute="leading" id="PTS-XZ-rM3"/>
+                <constraint firstItem="f3i-da-8bc" firstAttribute="trailing" secondItem="yG8-Au-lOU" secondAttribute="trailing" id="tXe-UH-It7"/>
+                <constraint firstItem="f3i-da-8bc" firstAttribute="top" secondItem="yG8-Au-lOU" secondAttribute="top" id="wwT-gh-hSY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="yG8-Au-lOU"/>
+            <point key="canvasLocation" x="-76.5" y="-2.5"/>
+        </view>
+    </objects>
+</document>

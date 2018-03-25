@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Mine_SheHui_Person">
+            <connections>
+                <outlet property="view" destination="7Ip-1m-Q9T" id="06F-tM-Vbl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="7Ip-1m-Q9T">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcF-wT-zKx">
+                    <rect key="frame" x="20" y="50" width="157.5" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="5KF-lQ-Xv1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                    <state key="normal" title="个人资料" image="person_person">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="personClick:" destination="-1" eventType="touchUpInside" id="DCh-3h-oZA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14b-Qu-FHV">
+                    <rect key="frame" x="197.5" y="50" width="157.5" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Yw2-ch-yH8"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                    <state key="normal" title="修改密码" image="psw_person">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="pswClick:" destination="-1" eventType="touchUpInside" id="aK4-Ml-uWz"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="na2-Di-Ssh">
+                    <rect key="frame" x="20" y="130" width="157.5" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="po6-r4-pfF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="绑定手机号" image="phoneNum_person">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="phoneNumClick:" destination="-1" eventType="touchUpInside" id="SuY-jP-0lh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xve-iH-feJ">
+                    <rect key="frame" x="197.5" y="130" width="157.5" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="5oX-P2-2ZI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="40" maxY="0.0"/>
+                    <state key="normal" title="设置" image="set_person">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="setClick:" destination="-1" eventType="touchUpInside" id="Tb9-z1-Jja"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.92156862750000001" green="0.92549019610000005" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Xve-iH-feJ" firstAttribute="height" secondItem="wcF-wT-zKx" secondAttribute="height" id="2ts-op-aGE"/>
+                <constraint firstItem="wcF-wT-zKx" firstAttribute="top" secondItem="Pke-6d-TiU" secondAttribute="top" constant="30" id="7c7-PE-1uG"/>
+                <constraint firstItem="na2-Di-Ssh" firstAttribute="height" secondItem="wcF-wT-zKx" secondAttribute="height" id="CiI-Cl-v0P"/>
+                <constraint firstItem="na2-Di-Ssh" firstAttribute="leading" secondItem="Pke-6d-TiU" secondAttribute="leading" constant="20" id="EsQ-7p-ajg"/>
+                <constraint firstItem="Pke-6d-TiU" firstAttribute="trailing" secondItem="14b-Qu-FHV" secondAttribute="trailing" constant="20" id="KGZ-wB-AHa"/>
+                <constraint firstItem="Xve-iH-feJ" firstAttribute="leading" secondItem="na2-Di-Ssh" secondAttribute="trailing" constant="20" id="KmJ-nX-VaB"/>
+                <constraint firstItem="14b-Qu-FHV" firstAttribute="top" secondItem="Pke-6d-TiU" secondAttribute="top" constant="30" id="NLm-GS-Kx5"/>
+                <constraint firstItem="Xve-iH-feJ" firstAttribute="top" secondItem="14b-Qu-FHV" secondAttribute="bottom" constant="30" id="OQC-fp-evT"/>
+                <constraint firstItem="na2-Di-Ssh" firstAttribute="width" secondItem="wcF-wT-zKx" secondAttribute="width" id="Sqy-2q-2Jl"/>
+                <constraint firstItem="Xve-iH-feJ" firstAttribute="width" secondItem="wcF-wT-zKx" secondAttribute="width" id="TMz-lK-dgI"/>
+                <constraint firstItem="wcF-wT-zKx" firstAttribute="leading" secondItem="Pke-6d-TiU" secondAttribute="leading" constant="20" id="eHW-pY-cqn"/>
+                <constraint firstItem="14b-Qu-FHV" firstAttribute="leading" secondItem="wcF-wT-zKx" secondAttribute="trailing" constant="20" id="eMy-EJ-RbI"/>
+                <constraint firstItem="na2-Di-Ssh" firstAttribute="top" secondItem="wcF-wT-zKx" secondAttribute="bottom" constant="30" id="ot1-5Q-q62"/>
+                <constraint firstItem="14b-Qu-FHV" firstAttribute="height" secondItem="wcF-wT-zKx" secondAttribute="height" id="rsT-tW-QG6"/>
+                <constraint firstItem="14b-Qu-FHV" firstAttribute="width" secondItem="wcF-wT-zKx" secondAttribute="width" id="tq1-Rz-5nQ"/>
+                <constraint firstItem="Pke-6d-TiU" firstAttribute="trailing" secondItem="Xve-iH-feJ" secondAttribute="trailing" constant="20" id="vuV-Z9-yd1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Pke-6d-TiU"/>
+            <point key="canvasLocation" x="63" y="17"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="person_person" width="31" height="31"/>
+        <image name="phoneNum_person" width="31" height="31"/>
+        <image name="psw_person" width="31" height="31"/>
+        <image name="set_person" width="31" height="31"/>
+    </resources>
+</document>
