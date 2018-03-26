@@ -25,11 +25,21 @@
 
 #define RGB(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]//自定义颜色
 
+//工作人员
+#define WORKURL(url) [NSString stringWithFormat:@"http://222.222.49.34:8057/%@",url]
+//社会人员
+#define SHURL(url) [NSString stringWithFormat:@"http://222.222.49.34:8050/%@",url]
+//救助
+#define JZURL(url) [NSString stringWithFormat:@"http://222.222.49.34:9095/%@",url]
+//核对
+#define HDURL(url) [NSString stringWithFormat:@"http://222.222.49.34:8099/%@",url]
+//一站式
+#define YZSURL(url) [NSString stringWithFormat:@"http://222.222.49.34:8088/%@",url]
 
 
 
 
-
+#define MD5KEY @"HYun1234"
 
 
 
@@ -39,10 +49,9 @@
 #import "UIView+Rect.h"
 #import "Masonry.h"
 #import "MBProgressHUD+Add.h"
-
-
-
-
+#import "UserMessage.h"
+#import "RequsetManager.h"
+#import "NSString+Add.h"
 
 
 

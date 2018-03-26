@@ -19,7 +19,8 @@
     hud.label.text = text;
     hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"MBProgressHUD.bundle/%@", icon]]];
     hud.mode = MBProgressHUDModeCustomView;
-    
+    hud.bezelView.backgroundColor = [UIColor blackColor];
+    hud.label.textColor = [UIColor whiteColor];
     hud.removeFromSuperViewOnHide = YES;
     
     [hud hideAnimated:YES afterDelay:0.5]; //修改0.5-0.1

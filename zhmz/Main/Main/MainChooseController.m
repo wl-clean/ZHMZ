@@ -50,7 +50,7 @@
         make.right.equalTo(self.view).mas_offset(-40);
         make.height.mas_equalTo(img.mas_width).multipliedBy(0.083);
     }];
-    
+
     NSArray *imageArr = @[@"核对系统",@"社会救助",@"医疗救助",];
     _scroll = [CycleScrollView cycleScrollViewWithFrame:CGRectMake(0, HEIGTH/2-(self.view.frame.size.width-150)/2, self.view.frame.size.width, self.view.frame.size.width-150) imageGroups:imageArr];
     _scroll.imgCornerRadius = (self.view.frame.size.width - 150)/2;

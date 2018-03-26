@@ -10,6 +10,15 @@
 
 @interface UserMessage : NSObject
 
-@property(nonatomic,copy)NSString * userType;
+@property(nonatomic,assign)int loginType;//1是工作,0是社会
+@property(nonatomic,copy)NSString * userName;//账号
+@property(nonatomic,copy)NSString * userPsw;//密码
 
+@property(nonatomic,copy)NSString * jzResultIp;//救助ip
+@property(nonatomic,copy)NSString * hdResultIp;//核对ip
+@property(nonatomic,copy)NSString * yzsResultIp;//一站式ip
+
+
+
++ (id)userMessage;
 @end

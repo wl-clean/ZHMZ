@@ -20,6 +20,9 @@
 		C0934DC02063EE6700E96D55 /* PersonVC_SheHui_Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C0934DBE2063EE6700E96D55 /* PersonVC_SheHui_Person.m */; };
 		C0934DC12063EE6700E96D55 /* PersonVC_SheHui_Person.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0934DBF2063EE6700E96D55 /* PersonVC_SheHui_Person.xib */; };
 		C0934DC52063F35A00E96D55 /* UserMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C0934DC42063F35A00E96D55 /* UserMessage.m */; };
+		C0934DC92067E5B800E96D55 /* HTTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C0934DC82067E5B800E96D55 /* HTTPManager.m */; };
+		C0934DCC20688EF500E96D55 /* RequsetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C0934DCB20688EF500E96D55 /* RequsetManager.m */; };
+		C0934DD32068986500E96D55 /* NSString+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = C0934DD22068986500E96D55 /* NSString+Add.m */; };
 		C095335F2050D03B0082F384 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C095335E2050D03B0082F384 /* AppDelegate.m */; };
 		C09533622050D03B0082F384 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C09533612050D03B0082F384 /* ViewController.m */; };
 		C09533672050D03B0082F384 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C09533662050D03B0082F384 /* Assets.xcassets */; };
@@ -95,6 +98,12 @@
 		C0934DBF2063EE6700E96D55 /* PersonVC_SheHui_Person.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonVC_SheHui_Person.xib; sourceTree = "<group>"; };
 		C0934DC32063F35A00E96D55 /* UserMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserMessage.h; sourceTree = "<group>"; };
 		C0934DC42063F35A00E96D55 /* UserMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserMessage.m; sourceTree = "<group>"; };
+		C0934DC72067E5B800E96D55 /* HTTPManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPManager.h; sourceTree = "<group>"; };
+		C0934DC82067E5B800E96D55 /* HTTPManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTPManager.m; sourceTree = "<group>"; };
+		C0934DCA20688EF500E96D55 /* RequsetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequsetManager.h; sourceTree = "<group>"; };
+		C0934DCB20688EF500E96D55 /* RequsetManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequsetManager.m; sourceTree = "<group>"; };
+		C0934DD12068986500E96D55 /* NSString+Add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Add.h"; sourceTree = "<group>"; };
+		C0934DD22068986500E96D55 /* NSString+Add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Add.m"; sourceTree = "<group>"; };
 		C095335A2050D03B0082F384 /* zhmz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zhmz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C095335D2050D03B0082F384 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C095335E2050D03B0082F384 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -266,6 +275,26 @@
 			path = UserMessage;
 			sourceTree = "<group>";
 		};
+		C0934DC62067E5A600E96D55 /* HTTPManager */ = {
+			isa = PBXGroup;
+			children = (
+				C0934DC72067E5B800E96D55 /* HTTPManager.h */,
+				C0934DC82067E5B800E96D55 /* HTTPManager.m */,
+				C0934DCA20688EF500E96D55 /* RequsetManager.h */,
+				C0934DCB20688EF500E96D55 /* RequsetManager.m */,
+			);
+			path = HTTPManager;
+			sourceTree = "<group>";
+		};
+		C0934DCD2068983900E96D55 /* NSString_Add */ = {
+			isa = PBXGroup;
+			children = (
+				C0934DD12068986500E96D55 /* NSString+Add.h */,
+				C0934DD22068986500E96D55 /* NSString+Add.m */,
+			);
+			path = NSString_Add;
+			sourceTree = "<group>";
+		};
 		C09533512050D03B0082F384 = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +368,7 @@
 		C09533932050E41C0082F384 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				C0934DC62067E5A600E96D55 /* HTTPManager */,
 				C0934DC22063F34A00E96D55 /* UserMessage */,
 				C0E98F122056146400DA9BE3 /* CodeBtnOnly */,
 				C09533B120522E760082F384 /* CycelScrollBtn */,
@@ -361,6 +391,7 @@
 		C09533952050E57A0082F384 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C0934DCD2068983900E96D55 /* NSString_Add */,
 				C0E98F0B2055079E00DA9BE3 /* MBProgressHUD_Add */,
 				C09533A1205136AD0082F384 /* View_Rect */,
 			);
@@ -739,6 +770,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0934DC52063F35A00E96D55 /* UserMessage.m in Sources */,
+				C0934DCC20688EF500E96D55 /* RequsetManager.m in Sources */,
 				C09533A4205136D60082F384 /* UIView+Rect.m in Sources */,
 				C09B745F20596A44006A0980 /* PersonVC_Person.m in Sources */,
 				C0E98F1120556FD700DA9BE3 /* ForgetViewController.m in Sources */,
@@ -753,10 +785,12 @@
 				C06D56D1205EA8E70020509A /* Plan_SheHui_Person.m in Sources */,
 				C0E98F1B20561B3300DA9BE3 /* NewPSWViewController.m in Sources */,
 				C09B746E20596A89006A0980 /* SetVC_Person.m in Sources */,
+				C0934DC92067E5B800E96D55 /* HTTPManager.m in Sources */,
 				C095336D2050D03B0082F384 /* main.m in Sources */,
 				C095335F2050D03B0082F384 /* AppDelegate.m in Sources */,
 				C06D56CE205EA8CD0020509A /* Message_SheHui_Person.m in Sources */,
 				C0E98F182056163000DA9BE3 /* TimerBtn.m in Sources */,
+				C0934DD32068986500E96D55 /* NSString+Add.m in Sources */,
 				C0934DC02063EE6700E96D55 /* PersonVC_SheHui_Person.m in Sources */,
 				C09533B7205230240082F384 /* CycleScrollFlowLayout.m in Sources */,
 				C09533B420522EAF0082F384 /* CycleScrollView.m in Sources */,

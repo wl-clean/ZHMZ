@@ -57,6 +57,7 @@ static int top = 230;
     
     _psw = [[TextFiled_Login alloc]initWithFrame:CGRectMake(left, 290, WIDTH-2*left, height) img:@"pswIcon" text:@"请输入密码"];
     _psw.cornerRadius = 5;
+    _psw.safeInput = YES;
     [self.view addSubview:_psw];
     
     _workBtn = [[UIButton alloc]initWithFrame:CGRectMake(WIDTH-left-2*80, 360, 80, 20)];
@@ -68,7 +69,7 @@ static int top = 230;
     [_workBtn addTarget:self action:@selector(chonesePeople:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_workBtn];
     _personBtn = [[UIButton alloc]initWithFrame:CGRectMake(WIDTH-left-80, 360, 80, 20)];
-    _personBtn.tag = 2;
+    _personBtn.tag = 0;
     [_personBtn setImage:[UIImage imageNamed:@"selectNo_login"] forState:UIControlStateNormal];
     [_personBtn setTitle:@"社会人员" forState:UIControlStateNormal];
     _personBtn.titleLabel.font = [UIFont systemFontOfSize:13];
@@ -119,6 +120,8 @@ static int top = 230;
     [btn addTarget:self action:@selector(forgetPsw) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     UIButton * btn2 = [[UIButton alloc]initWithFrame:CGRectMake(WIDTH-left-70, 460, 70, 30)];
+    //功能废弃
+    btn2.hidden = YES;
     btn2.titleLabel.textAlignment = NSTextAlignmentRight;
     [btn2 setTitle:@"立即注册" forState:UIControlStateNormal];
     btn2.titleLabel.font = [UIFont systemFontOfSize:16];
@@ -138,17 +141,31 @@ static int top = 230;
         [self.workBtn setImage:[UIImage imageNamed:@"selectNo_login"] forState:UIControlStateNormal];
     }
     self.select = (int)sender.tag;
+    UserMessage * manager = [UserMessage userMessage];
+    manager.loginType = (int)sender.tag;
 }
 
 - (void)loginChonese:(UIButton *)sender {
+    NSString * md5Code = [[NSString stringWithFormat:@"%@%@%@",self.userName.text,self.psw.text,MD5KEY] getMd5_32Bit];
     if (sender.tag == 0) {
-        MainChooseController * main = [[MainChooseController alloc]init];
-        [self.navigationController pushViewController:main animated:YES];
-        NavigationController_Base * nav = [[NavigationController_Base alloc]initWithRootViewController:main];
-        nav.navigateType = 2;
-        UIWindow * window = [UIApplication sharedApplication].delegate.window;
-        window.rootViewController = nav;
-        [window makeKeyAndVisible];
+        if ([NSString isBlankString:self.userName.text]||[NSString isBlankString:self.psw.text]) {
+            [MBProgressHUD showError:@"账号密码不能为空" toView:self.view];
+            return;
+        }
+        [RequsetManager loginWithDict:@{@"LoginName":self.userName.text,@"PassWord":self.psw.text,@"Md5Key":md5Code} completion:^(NSDictionary *returnData) {
+            NSDictionary * error = returnData[@"Error"];
+            if ([error[@"ErrorCode"] intValue]==0) {
+                MainChooseController * main = [[MainChooseController alloc]init];
+                [self.navigationController pushViewController:main animated:YES];
+                NavigationController_Base * nav = [[NavigationController_Base alloc]initWithRootViewController:main];
+                nav.navigateType = 2;
+                UIWindow * window = [UIApplication sharedApplication].delegate.window;
+                window.rootViewController = nav;
+                [window makeKeyAndVisible];
+            } else {
+                [MBProgressHUD showError:error[@"ErrorMessage"] toView:self.view];
+            }
+        }];
     } else {
         
     }

@@ -40,8 +40,8 @@ UISearchControllerDelegate,UISearchResultsUpdating>
     self.searchController = [[UISearchController alloc]initWithSearchResultsController:nil];
     self.searchController.delegate= self;
     self.searchController.searchResultsUpdater = self;
-    self.searchController.searchBar.barTintColor = [UIColor lightGrayColor];
-    self.searchController.searchBar.placeholder= @"请输入关键字搜索";
+    self.searchController.searchBar.barTintColor = RGB(235, 236, 239, 1);
+    self.searchController.searchBar.placeholder= @"输入受理号查询";
     self.searchController.searchBar.frame = CGRectMake(0,0,WIDTH, 44);
     self.tableView.tableHeaderView = self.searchController.searchBar;
     [self.view addSubview: self.tableView];

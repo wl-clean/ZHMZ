@@ -12,7 +12,7 @@
 
 @property(nonatomic,copy)NSString * text;
 @property(nonatomic,assign)float cornerRadius;
-
+@property(nonatomic,assign)BOOL safeInput;
 
 - (instancetype)initWithFrame:(CGRect)frame img:(NSString *)img text:(NSString *)text;
 

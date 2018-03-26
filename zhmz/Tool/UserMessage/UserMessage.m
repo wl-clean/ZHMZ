@@ -17,6 +17,7 @@
         if (userMessage == nil) {
             userMessage = [[self alloc]init];
         }
+        userMessage.loginType = 1;
     });
     return userMessage;
 }

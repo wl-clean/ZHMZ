@@ -23,6 +23,8 @@
         self.layer.borderColor = [UIColor lightGrayColor].CGColor;
         UITextField * textF = [[UITextField alloc]init];
         textF.placeholder = text;
+        textF.secureTextEntry = NO;
+        textF.tag = 1001;
         if (img == nil) {
             textF.frame = CGRectMake(frame.size.height/2, frame.size.height/4, frame.size.width-frame.size.height, frame.size.height/2);
         } else {
@@ -44,5 +46,9 @@
 }
 - (void)setCornerRadius:(float)cornerRadius {
     self.layer.cornerRadius = cornerRadius;
+}
+- (void)setSafeInput:(BOOL)safeInput {
+    UITextField * text = [self viewWithTag:1001];
+    text.secureTextEntry = YES;
 }
 @end
