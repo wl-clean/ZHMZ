@@ -22,4 +22,11 @@
     return userMessage;
 }
 
+- (NSMutableArray *)arrIp {
+    if (_arrIp == nil) {
+        _arrIp = [[NSMutableArray alloc]init];
+    }
+    return _arrIp;
+}
+
 @end

@@ -13,6 +13,8 @@
 #define WIDTH  [[UIScreen mainScreen] bounds].size.width//屏幕宽度
 #define HEIGTH  [[UIScreen mainScreen] bounds].size.height//屏幕高度
 
+
+
 //判断设备类型
 #define iPhone4 ([UIScreen mainScreen].bounds.size.height == 480)
 #define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
@@ -24,6 +26,9 @@
 #define AttributeText(title,r,g,b,a,size) [[NSAttributedString alloc]initWithString:title attributes:@{NSForegroundColorAttributeName:RGB(r, g, b, a),NSFontAttributeName:[UIFont systemFontOfSize:size]}]//自定义文字
 
 #define RGB(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]//自定义颜色
+
+#define USER [UserMessage userMessage];
+
 
 //工作人员
 #define WORKURL(url) [NSString stringWithFormat:@"http://222.222.49.34:8057/%@",url]

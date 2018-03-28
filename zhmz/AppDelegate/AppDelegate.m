@@ -19,10 +19,11 @@
     // Override point for customization after application launch.
     [RequsetManager getOnlyCodeWithCompletion:^(NSDictionary *returnData) {
         if ([returnData[@"Error"][@"ErrorCode"]intValue]==0) {
-            UserMessage * user = [UserMessage userMessage];
+            UserMessage * user = USER;
             user.jzResultIp = returnData[@"Result"][0][@"result"];
             user.hdResultIp = returnData[@"Result"][1][@"result"];
             user.yzsResultIp = returnData[@"Result"][2][@"result"];
+            [user.arrIp addObjectsFromArray:@[user.jzResultIp,user.hdResultIp,user.yzsResultIp]];
         } else {
 
         }

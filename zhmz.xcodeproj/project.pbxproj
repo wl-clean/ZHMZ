@@ -202,6 +202,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C0219AED206A972200D4F464 /* SheHuiController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SheHuiController;
+			sourceTree = "<group>";
+		};
+		C0219AEE206A972200D4F464 /* WorkController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WorkController;
+			sourceTree = "<group>";
+		};
 		C06D56B9205E5A7F0020509A /* Plan */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +262,8 @@
 		C0934DB5205FF00100E96D55 /* Node */ = {
 			isa = PBXGroup;
 			children = (
+				C0219AED206A972200D4F464 /* SheHuiController */,
+				C0219AEE206A972200D4F464 /* WorkController */,
 				C06D56BB205E5A7F0020509A /* Main */,
 				C06D56BA205E5A7F0020509A /* Message */,
 				C06D56B9205E5A7F0020509A /* Plan */,

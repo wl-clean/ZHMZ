@@ -141,7 +141,7 @@ static int top = 230;
         [self.workBtn setImage:[UIImage imageNamed:@"selectNo_login"] forState:UIControlStateNormal];
     }
     self.select = (int)sender.tag;
-    UserMessage * manager = [UserMessage userMessage];
+    UserMessage * manager = USER;
     manager.loginType = (int)sender.tag;
 }
 
@@ -153,8 +153,35 @@ static int top = 230;
             return;
         }
         [RequsetManager loginWithDict:@{@"LoginName":self.userName.text,@"PassWord":self.psw.text,@"Md5Key":md5Code} completion:^(NSDictionary *returnData) {
+            if ([returnData isKindOfClass: [NSError class]]) {
+                [MBProgressHUD showError:@"网络错误" toView:self.view];
+                return;
+            }
             NSDictionary * error = returnData[@"Error"];
             if ([error[@"ErrorCode"] intValue]==0) {
+                NSDictionary * dict = returnData[@"Result"][0];
+                NSDictionary * userDict = dict[@"personal"];
+                NSArray * msgArr = dict[@"systemMsg"];
+                
+                UserMessage * user = USER;
+                user.realName = userDict[@"realName"];
+                user.personalId = userDict[@"personalId"];
+                user.mobilePhone = userDict[@"mobilePhone"];
+                user.officePhone = userDict[@"officePhone"];
+                user.orgCode = userDict[@"orgCode"];
+                user.email = userDict[@"email"];
+                user.departName = userDict[@"departName"];
+                
+                for (NSDictionary * dict in msgArr) {
+                    if ([dict[@"identification"]isEqualToString:user.jzResultIp]) {
+                        user.jzAccount = dict[@"account"];
+                    } if ([dict[@"identification"]isEqualToString:user.hdResultIp]) {
+                        user.hdAccount = dict[@"account"];
+                    } if ([dict[@"identification"]isEqualToString:user.yzsResultIp]) {
+                        user.yzsResultIp = dict[@"account"];
+                    }
+                }
+                
                 MainChooseController * main = [[MainChooseController alloc]init];
                 [self.navigationController pushViewController:main animated:YES];
                 NavigationController_Base * nav = [[NavigationController_Base alloc]initWithRootViewController:main];

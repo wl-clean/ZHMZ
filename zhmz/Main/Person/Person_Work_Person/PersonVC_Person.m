@@ -18,7 +18,6 @@
     [super viewDidLoad];
     self.title = @"个人资料";
     
-    [self creatView];
 }
 
 - (void)creatView {

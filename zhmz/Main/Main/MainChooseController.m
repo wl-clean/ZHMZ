@@ -60,21 +60,67 @@
 }
 
 - (void)cycleScrollView:(CycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {
-    NSArray * titName = @[@"首页",@"信息查询",@"进度查询",@"我的"];
-    NSArray * imgName = @[@"首页",@"信息查询",@"进度查询",@"我的"];
-    NSArray * imgNameSelect = @[@"首页_select",@"信息查询_select",@"进度查询_select",@"我的_select"];
-    NSArray * className = @[@"MainVC_SheHui_Person",@"Message_SheHui_Person",@"Plan_SheHui_Person",@"Mine_SheHui_Person"];
-    NSDictionary * dict = [[NSDictionary alloc]initWithObjectsAndKeys:titName,@"titName",imgName,@"imgName",imgNameSelect,@"imgNameSelect",className,@"className", nil];
-    UITabBarController * tab = [self getTabBarControllerWithVCMessage:dict];
-    if (index == 0) {
 
-    } else if (index == 1) {
-
+    UITabBarController * tab;
+    UserMessage * user= USER;
+    if (user.loginType == 1) {
+        
+        if (index == 0) {
+            if ([NSString isBlankString:user.hdAccount]) {
+                
+            } else {
+                [MBProgressHUD showError:@"请联系管理员" toView:self.view];
+            }
+        } else if (index == 1) {
+            if ([NSString isBlankString:user.jzAccount]) {
+                NSArray * titName = @[@"首页",@"数据查询",@"业务办理",@"统计分析",@"我的"];
+                NSArray * imgName = @[@"首页",@"信息查询",@"业务办理",@"统计分析",@"我的"];
+                NSArray * imgNameSelect = @[@"首页_select",@"信息查询_select",@"业务办理_select",@"统计分析_select",@"我的_select"];
+                NSArray * className = @[@"",@"",@"",@"",@""];
+                NSDictionary * jzDict = [[NSDictionary alloc]initWithObjectsAndKeys:titName,@"titName",imgName,@"imgName",imgNameSelect,@"imgNameSelect",className,@"className", nil];
+            } else {
+                [MBProgressHUD showError:@"请联系管理员" toView:self.view];
+            }
+        } else {
+            if ([NSString isBlankString:user.yzsAccount]) {
+            
+            } else {
+                [MBProgressHUD showError:@"请联系管理员" toView:self.view];
+            }
+        }
     } else {
-
+        NSArray * titName = @[@"首页",@"信息查询",@"进度查询",@"我的"];
+        NSArray * imgName = @[@"首页",@"信息查询",@"进度查询",@"我的"];
+        NSArray * imgNameSelect = @[@"首页_select",@"信息查询_select",@"进度查询_select",@"我的_select"];
+        NSArray * className = @[@"MainVC_SheHui_Person",@"Message_SheHui_Person",@"Plan_SheHui_Person",@"Mine_SheHui_Person"];
+        NSDictionary * shDict = [[NSDictionary alloc]initWithObjectsAndKeys:titName,@"titName",imgName,@"imgName",imgNameSelect,@"imgNameSelect",className,@"className", nil];
+        if (index == 0) {
+            if ([NSString isBlankString:user.hdAccount]) {
+                
+            } else {
+                [MBProgressHUD showError:@"请联系管理员" toView:self.view];
+            }
+        } else if (index == 1) {
+            if ([NSString isBlankString:user.jzAccount]) {
+                
+            } else {
+                [MBProgressHUD showError:@"请联系管理员" toView:self.view];
+            }
+        } else {
+            if ([NSString isBlankString:user.yzsAccount]) {
+                
+            } else {
+                [MBProgressHUD showError:@"请联系管理员" toView:self.view];
+            }
+        }
+        tab = [self getTabBarControllerWithVCMessage:shDict];
     }
+    
+    
     [self.navigationController pushViewController:tab animated:YES];
 }
+
+
 
 - (UITabBarController *)getTabBarControllerWithVCMessage:(NSDictionary *)dict{
     NSMutableArray * sonViewControllers=[[NSMutableArray alloc]init];

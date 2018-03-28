@@ -21,7 +21,7 @@
 }
 
 + (void)loginWithDict:(NSDictionary *)dict completion:(ResultBlock)completion {
-    UserMessage * user = [UserMessage userMessage];
+    UserMessage * user = USER;
     NSString * path;
     if (user.loginType == 1) {
         path = WORKURL(@"SalvationPlatform/phoneLoginController.do?phoneLogin");
@@ -32,13 +32,19 @@
      post:path
      parameters:dict
      completion:^(NSDictionary *returnData) {
-         
+         NSLog(@"%@",returnData);
          completion(returnData);
     }];
 }
 
 + (void)forgetPswWithDict:(NSDictionary *)dict completion:(ResultBlock)completion {
     
+}
+
++ (void)getUserInfo {
+    [HTTPManager post:WORKURL(@"SocietySalvation/api/appCommonController.do?getUserInfo") parameters:nil completion:^(NSDictionary *returnData) {
+        NSLog(@"%@",returnData);
+    }];
 }
 
 @end
