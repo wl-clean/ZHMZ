@@ -22,7 +22,7 @@
     return [result uppercaseString];
 }
 
-+ (BOOL) isBlankString:(NSString *)string {
++ (BOOL) isEmptyString:(NSString *)string {
     if (string == nil || string == NULL) {
         return YES;
     }

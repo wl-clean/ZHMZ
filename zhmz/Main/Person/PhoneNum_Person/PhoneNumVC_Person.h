@@ -10,6 +10,5 @@
 
 @interface PhoneNumVC_Person : ViewController_Base
 @property (weak, nonatomic) IBOutlet UITextField *phoneNum;
-@property (weak, nonatomic) IBOutlet UITextField *codeNum;
 
 @end

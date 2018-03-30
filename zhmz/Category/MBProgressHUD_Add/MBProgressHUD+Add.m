@@ -23,7 +23,7 @@
     hud.label.textColor = [UIColor whiteColor];
     hud.removeFromSuperViewOnHide = YES;
     
-    [hud hideAnimated:YES afterDelay:0.5]; //修改0.5-0.1
+    [hud hideAnimated:YES afterDelay:1]; //修改0.5-0.1
 }
 
 + (void)showError:(NSString *)error toView:(UIView *)view{
@@ -40,7 +40,6 @@
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.label.text = message;
     hud.removeFromSuperViewOnHide = YES;
-    hud.dimBackground = YES;
     return hud;
 }
 @end

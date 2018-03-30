@@ -26,25 +26,30 @@
     if (user.loginType == 1) {
         path = WORKURL(@"SalvationPlatform/phoneLoginController.do?phoneLogin");
     } else {
-        path = SHURL(@"SalvationPlatform/phoneLoginController.do?phoneLogin");
+        path = SHURL(@"");
     }
     [HTTPManager
      post:path
      parameters:dict
      completion:^(NSDictionary *returnData) {
-         NSLog(@"%@",returnData);
          completion(returnData);
     }];
 }
 
 + (void)forgetPswWithDict:(NSDictionary *)dict completion:(ResultBlock)completion {
-    
+    [HTTPManager post:SHURL(@"jeecg-bpm/api/login.do?findPassword") parameters:@{} completion:^(NSDictionary *returnData) {
+        completion(returnData);
+    }];
 }
 
-+ (void)getUserInfo {
-    [HTTPManager post:WORKURL(@"SocietySalvation/api/appCommonController.do?getUserInfo") parameters:nil completion:^(NSDictionary *returnData) {
-        NSLog(@"%@",returnData);
++ (void)getUserInfoWithAccount:(NSString *)account md5Key:(NSString *)md5Key completion:(ResultBlock)completion {
+    [HTTPManager post:WORKURL(@"SocietySalvation/api/appCommonController.do?getUserInfo") parameters:@{@"username":account,@"Md5Key":md5Key} completion:^(NSDictionary *returnData) {
+        completion(returnData);
     }];
+}
+
++ (void)alterPswWithDict:(NSDictionary *)dict completion:(ResultBlock)completion {
+    
 }
 
 @end

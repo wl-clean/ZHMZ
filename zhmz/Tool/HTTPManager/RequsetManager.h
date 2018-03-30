@@ -21,5 +21,6 @@ typedef void(^ResultBlock)(NSDictionary *returnData);
 //忘记密码
 + (void)forgetPswWithDict:(NSDictionary *)dict completion:(ResultBlock)completion;
 
-
+//获取权限
++ (void)getUserInfoWithAccount:(NSString *)account md5Key:(NSString *)md5Key completion:(ResultBlock)completion;
 @end

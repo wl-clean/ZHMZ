@@ -13,9 +13,11 @@
 + (void)post:(NSString *)URLString parameters:(NSDictionary *)dict completion:(ResultBlock)completion{
     AFHTTPSessionManager * manager = [HTTPManager manager];
     [manager POST:URLString parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@",responseObject);
         completion(responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        completion((id)error);
+        completion(@{@"Error":@{@"ErrorCode":@"1"}});
+        NSLog(@"%@",error);
     }];
 }
 

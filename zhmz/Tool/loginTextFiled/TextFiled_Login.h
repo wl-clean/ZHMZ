@@ -10,9 +10,11 @@
 
 @interface TextFiled_Login : UIView
 
-@property(nonatomic,copy)NSString * text;
 @property(nonatomic,assign)float cornerRadius;
 @property(nonatomic,assign)BOOL safeInput;
+
+@property(nonatomic,strong)UITextField * textField;
+
 
 - (instancetype)initWithFrame:(CGRect)frame img:(NSString *)img text:(NSString *)text;
 

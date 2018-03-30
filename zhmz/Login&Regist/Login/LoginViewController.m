@@ -38,7 +38,6 @@ static int top = 230;
     [self buildText];
     [self buildBtn];
     [self buildBtnSecond];
-
     UIImageView * imgL = [[UIImageView alloc]init];
     imgL.image = [UIImage imageNamed:@"loginLogo"];
     [self.view addSubview:imgL];
@@ -48,6 +47,8 @@ static int top = 230;
         make.right.equalTo(self.view.mas_right).mas_offset(-20*SCALE);
         make.height.mas_equalTo(imgL.mas_width).multipliedBy(0.56);
     }];
+    self.userName.textField.text = [USERDEFAULTS objectForKey:USERNAME];
+    self.psw.textField.text= [USERDEFAULTS objectForKey:PSW];
 }
 
 - (void)buildText {
@@ -146,17 +147,15 @@ static int top = 230;
 }
 
 - (void)loginChonese:(UIButton *)sender {
-    NSString * md5Code = [[NSString stringWithFormat:@"%@%@%@",self.userName.text,self.psw.text,MD5KEY] getMd5_32Bit];
+    NSString * md5Code = [[NSString stringWithFormat:@"%@%@%@",self.userName.textField.text,self.psw.textField.text,MD5KEY] getMd5_32Bit];
     if (sender.tag == 0) {
-        if ([NSString isBlankString:self.userName.text]||[NSString isBlankString:self.psw.text]) {
+        if ([NSString isEmptyString:self.userName.textField.text]||[NSString isEmptyString:self.psw.textField.text]) {
             [MBProgressHUD showError:@"账号密码不能为空" toView:self.view];
             return;
         }
-        [RequsetManager loginWithDict:@{@"LoginName":self.userName.text,@"PassWord":self.psw.text,@"Md5Key":md5Code} completion:^(NSDictionary *returnData) {
-            if ([returnData isKindOfClass: [NSError class]]) {
-                [MBProgressHUD showError:@"网络错误" toView:self.view];
-                return;
-            }
+        [MBProgressHUD showMessag:@"请稍等" toView:self.view];
+        [RequsetManager loginWithDict:@{@"LoginName":self.userName.textField.text,@"PassWord":self.psw.textField.text,@"Md5Key":md5Code} completion:^(NSDictionary *returnData) {
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
             NSDictionary * error = returnData[@"Error"];
             if ([error[@"ErrorCode"] intValue]==0) {
                 NSDictionary * dict = returnData[@"Result"][0];
@@ -171,7 +170,9 @@ static int top = 230;
                 user.orgCode = userDict[@"orgCode"];
                 user.email = userDict[@"email"];
                 user.departName = userDict[@"departName"];
-                
+                user.Md5Key = md5Code;
+                [USERDEFAULTS setObject:self.userName.textField.text forKey:USERNAME];
+                [USERDEFAULTS setObject:self.psw.textField.text forKey:PSW];
                 for (NSDictionary * dict in msgArr) {
                     if ([dict[@"identification"]isEqualToString:user.jzResultIp]) {
                         user.jzAccount = dict[@"account"];

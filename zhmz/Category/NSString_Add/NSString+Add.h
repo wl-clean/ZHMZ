@@ -14,5 +14,5 @@
 
 - (float)getAttributeWidthWithFontSize:(int)fontSize;
 
-+ (BOOL) isBlankString:(NSString *)string;
++ (BOOL) isEmptyString:(NSString *)string;
 @end

@@ -17,8 +17,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"个人资料";
-    
+    [self userData];
 }
+
+- (void)userData {
+    UserMessage * user = USER;
+    if (![NSString isEmptyString:user.realName]) {
+        self.name.text = user.realName;
+    }   if (![NSString isEmptyString:user.officePhone]) {
+        self.phone.text = user.officePhone;
+    }   if (![NSString isEmptyString:user.email]) {
+        self.e_mail.text = user.email;
+    }   if (![NSString isEmptyString:user.departName]) {
+        self.type.text = user.departName;
+    }
+}
+
+
 
 - (void)creatView {
     UIButton * btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 60, 44)];
@@ -38,8 +53,7 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)saveAndBack {
-}
+
 
 
 

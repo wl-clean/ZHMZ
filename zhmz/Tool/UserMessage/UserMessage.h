@@ -22,6 +22,7 @@
 @property(nonatomic,copy)NSString * email;//邮箱
 @property(nonatomic,copy)NSString * departName;//部门名称
 
+@property(nonatomic,copy)NSString * Md5Key;//合法性校验字段
 @property(nonatomic,copy)NSString * regionLevel;//权限等级
 
 @property(nonatomic,copy)NSString * jzAccount;//救助确认字段

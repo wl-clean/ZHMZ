@@ -12,11 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonVC_Person">
             <connections>
-                <outlet property="e_mail" destination="ZIU-if-Cd4" id="kam-CX-iY1"/>
-                <outlet property="name" destination="4nb-XW-tJs" id="3zS-Wm-pob"/>
-                <outlet property="phone" destination="50I-E5-dqZ" id="iSq-J2-K2a"/>
+                <outlet property="e_mail" destination="50I-E5-dqZ" id="ffF-hx-LNy"/>
+                <outlet property="name" destination="bqH-R7-hS9" id="zyY-nk-MrM"/>
+                <outlet property="phone" destination="4nb-XW-tJs" id="qCg-sC-SFe"/>
                 <outlet property="submitBtn" destination="Usf-ha-69q" id="EUp-eX-xn8"/>
-                <outlet property="type" destination="bqH-R7-hS9" id="z2o-C3-Cu6"/>
+                <outlet property="type" destination="ZIU-if-Cd4" id="zbu-Kg-TvM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -18,7 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     LoginViewController  * loginView = [[LoginViewController alloc]init];
     NavigationController_Base * loginNaigtion = [[NavigationController_Base alloc]initWithRootViewController:loginView];
     loginNaigtion.navigateType = 1;

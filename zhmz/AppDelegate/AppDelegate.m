@@ -28,7 +28,27 @@
 
         }
     }];
+    [self reachabilityStatusChange];
     return YES;
+}
+
+- (void)reachabilityStatusChange
+{
+    AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
+    [mgr setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        switch (status) {
+            case AFNetworkReachabilityStatusNotReachable:
+                NSLog(@"没有网络");
+                [MBProgressHUD showError:@"没有连接网络" toView:self.window.rootViewController.view];
+                break;
+            case AFNetworkReachabilityStatusUnknown:
+                NSLog(@"未知网络");
+                break;
+            default:
+                break;
+        }
+    }];
+    [mgr startMonitoring];
 }
 
 

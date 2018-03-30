@@ -12,7 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonViewController">
             <connections>
-                <outlet property="checkBtn" destination="LcJ-x1-q4n" id="2LV-eQ-dvS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -84,26 +83,9 @@
                         <action selector="setClick:" destination="-1" eventType="touchUpInside" id="9wp-60-kM2"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcJ-x1-q4n">
-                    <rect key="frame" x="20" y="210" width="157" height="50"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="sfb-Te-zwn"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
-                    <state key="normal" title="核对政策" image="check_person">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="checkClick:" destination="-1" eventType="touchUpInside" id="gOv-L4-b0H"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="0.92156862750000001" green="0.92549019610000005" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="LcJ-x1-q4n" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="0wd-fq-v3O"/>
                 <constraint firstItem="dcu-0b-B10" firstAttribute="top" secondItem="RFb-FM-Opb" secondAttribute="bottom" constant="30" id="1DY-qu-I9Y"/>
                 <constraint firstItem="RFb-FM-Opb" firstAttribute="width" secondItem="DJv-qN-VDD" secondAttribute="width" id="6XS-Sd-LAK"/>
                 <constraint firstItem="dcu-0b-B10" firstAttribute="height" secondItem="DJv-qN-VDD" secondAttribute="height" id="L5a-5q-1ri"/>
@@ -113,13 +95,10 @@
                 <constraint firstItem="aR8-Sv-QZF" firstAttribute="top" secondItem="DJv-qN-VDD" secondAttribute="bottom" constant="30" id="bYF-kc-pea"/>
                 <constraint firstItem="aR8-Sv-QZF" firstAttribute="width" secondItem="DJv-qN-VDD" secondAttribute="width" id="c7y-5I-Y1j"/>
                 <constraint firstItem="DJv-qN-VDD" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="30" id="c8D-Ri-a4t"/>
-                <constraint firstItem="LcJ-x1-q4n" firstAttribute="width" secondItem="aR8-Sv-QZF" secondAttribute="width" id="dxA-8C-SA4"/>
                 <constraint firstItem="RFb-FM-Opb" firstAttribute="leading" secondItem="DJv-qN-VDD" secondAttribute="trailing" constant="20" id="fEQ-EG-Sif"/>
-                <constraint firstItem="LcJ-x1-q4n" firstAttribute="height" secondItem="aR8-Sv-QZF" secondAttribute="height" id="fHl-sb-IMv"/>
                 <constraint firstItem="aR8-Sv-QZF" firstAttribute="height" secondItem="DJv-qN-VDD" secondAttribute="height" id="jsZ-qR-TFb"/>
                 <constraint firstItem="aR8-Sv-QZF" firstAttribute="top" secondItem="DJv-qN-VDD" secondAttribute="bottom" constant="30" id="kPx-LS-gqi"/>
                 <constraint firstItem="aR8-Sv-QZF" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="lto-9C-IV4"/>
-                <constraint firstItem="LcJ-x1-q4n" firstAttribute="top" secondItem="aR8-Sv-QZF" secondAttribute="bottom" constant="30" id="m6n-h4-iOA"/>
                 <constraint firstItem="dcu-0b-B10" firstAttribute="width" secondItem="DJv-qN-VDD" secondAttribute="width" id="oor-xG-aRb"/>
                 <constraint firstItem="RFb-FM-Opb" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="30" id="vtP-6d-v6p"/>
                 <constraint firstItem="RFb-FM-Opb" firstAttribute="height" secondItem="DJv-qN-VDD" secondAttribute="height" id="xuS-aw-PbN"/>
@@ -131,7 +110,6 @@
         </view>
     </objects>
     <resources>
-        <image name="check_person" width="31" height="31"/>
         <image name="person_person" width="31" height="31"/>
         <image name="phoneNum_person" width="31" height="31"/>
         <image name="psw_person" width="31" height="31"/>

@@ -8,6 +8,7 @@
 
 #import "PersonViewController.h"
 #import "PersonVC_Person.h"
+#import "PersonVC_SheHui_Person.h"
 #import "PswVC_Person.h"
 #import "PhoneNumVC_Person.h"
 #import "SetVC_Person.h"
@@ -24,8 +25,15 @@
     self.title = @"我的";
 }
 - (IBAction)personClick:(id)sender {
-    PersonVC_Person * person = [[PersonVC_Person alloc]init];
+    UserMessage * user = USER;
+    id person;
+    if (user.loginType == 1) {
+        person = [[PersonVC_Person alloc]init];
+    } else {
+        person = [[PersonVC_SheHui_Person alloc]init];
+    }
     [self.navigationController pushViewController:person animated:YES];
+
 }
 - (IBAction)pswClick:(id)sender {
     PswVC_Person * psw = [[PswVC_Person alloc]init];
@@ -39,9 +47,7 @@
     SetVC_Person * set = [[SetVC_Person alloc]init];
     [self.navigationController pushViewController:set animated:YES];
 }
-- (IBAction)checkClick:(id)sender {
-    
-}
+
 
 
 @end

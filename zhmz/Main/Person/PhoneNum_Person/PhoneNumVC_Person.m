@@ -18,11 +18,12 @@
     [super viewDidLoad];
     self.title = @"绑定手机号";
 }
-- (IBAction)sendCode:(id)sender {
 
-}
 - (IBAction)submitNum:(id)sender {
 
+}
+- (IBAction)noBindPhone:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

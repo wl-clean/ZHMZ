@@ -28,6 +28,10 @@
 #define RGB(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]//自定义颜色
 
 #define USER [UserMessage userMessage];
+#define USERDEFAULTS [NSUserDefaults standardUserDefaults]
+#define USERNAME @"userNameStr"
+#define PSW @"pswStr"
+
 
 
 //工作人员
