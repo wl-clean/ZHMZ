@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetVC_Person">
             <connections>
-                <outlet property="sendOpen" destination="WIy-EC-HnY" id="dYa-w6-npP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,24 +29,24 @@
                             <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已关闭" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIy-EC-HnY">
-                            <rect key="frame" x="255" y="15" width="100" height="20.5"/>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vhi-Zt-oQv">
+                            <rect key="frame" x="308" y="10" width="49" height="31"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="100" id="iiN-Vu-rUV"/>
+                                <constraint firstAttribute="width" constant="47" id="AkX-LM-sCc"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                            <connections>
+                                <action selector="newSend:" destination="-1" eventType="touchUpInside" id="y5D-cO-J2T"/>
+                            </connections>
+                        </switch>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="WIy-EC-HnY" secondAttribute="trailing" constant="20" id="67S-pi-QqX"/>
                         <constraint firstItem="u0F-ow-QWI" firstAttribute="leading" secondItem="YwX-Me-1Qe" secondAttribute="leading" constant="20" id="CKe-fh-rdy"/>
-                        <constraint firstItem="WIy-EC-HnY" firstAttribute="top" secondItem="YwX-Me-1Qe" secondAttribute="top" constant="15" id="JiC-Qr-zPH"/>
+                        <constraint firstItem="vhi-Zt-oQv" firstAttribute="top" secondItem="YwX-Me-1Qe" secondAttribute="top" constant="10" id="Lyc-Bs-qet"/>
                         <constraint firstAttribute="bottom" secondItem="u0F-ow-QWI" secondAttribute="bottom" constant="15" id="P2s-sD-K13"/>
-                        <constraint firstAttribute="bottom" secondItem="WIy-EC-HnY" secondAttribute="bottom" constant="15" id="pMd-hp-FNP"/>
+                        <constraint firstAttribute="bottom" secondItem="vhi-Zt-oQv" secondAttribute="bottom" constant="9.5" id="tEb-7C-RTn"/>
                         <constraint firstItem="u0F-ow-QWI" firstAttribute="top" secondItem="YwX-Me-1Qe" secondAttribute="top" constant="15" id="ucE-Lx-LqB"/>
+                        <constraint firstAttribute="trailing" secondItem="vhi-Zt-oQv" secondAttribute="trailing" constant="20" id="zPR-ai-aqS"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sIW-73-vc6">
@@ -86,7 +85,6 @@
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4pQ-nF-VSe">
                             <rect key="frame" x="308" y="10" width="49" height="31"/>
                             <constraints>
-                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="47" id="4Fy-iH-0xZ"/>
                                 <constraint firstAttribute="width" constant="47" id="iGh-K3-c4F"/>
                             </constraints>
                             <connections>

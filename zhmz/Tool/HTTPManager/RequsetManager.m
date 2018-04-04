@@ -20,13 +20,12 @@
      }];
 }
 
-+ (void)loginWithDict:(NSDictionary *)dict completion:(ResultBlock)completion {
-    UserMessage * user = USER;
++ (void)loginWithDict:(NSDictionary *)dict loginType:(int)loginType completion:(ResultBlock)completion {
     NSString * path;
-    if (user.loginType == 1) {
+    if (loginType == 1) {
         path = WORKURL(@"SalvationPlatform/phoneLoginController.do?phoneLogin");
     } else {
-        path = SHURL(@"");
+        path = SHURL(@"weixin/api/login.do?wxLogin");
     }
     [HTTPManager
      post:path
@@ -49,7 +48,32 @@
 }
 
 + (void)alterPswWithDict:(NSDictionary *)dict completion:(ResultBlock)completion {
-    
+    UserMessage * user = USER;
+    NSString * path;
+    if (user.loginType == 1) {
+        path = WORKURL(@"SalvationPlatform/phoneLoginController.do?phoneLogin");
+    } else {
+        path = SHURL(@"weixin/api/login.do?wxLogin");
+    }
+    [HTTPManager
+     post:path
+     parameters:dict
+     completion:^(NSDictionary *returnData) {
+         completion(returnData);
+     }];
+}
+
++ (void)alterPhoneWithNewPhone:(NSString *)newPhone oldPhone:(NSString *)oldPhone completion:(ResultBlock)completion {
+    UserMessage * user = USER;
+    NSString * path;
+    if (user.loginType == 1) {
+        path = WORKURL(@"SalvationPlatform/phoneLoginController.do?modifyPhone");
+    } else {
+        path = SHURL(@"weixin/api/login.do?modifyPhone");
+    }
+    [HTTPManager post:path parameters:@{@"oldPhone":oldPhone,@"newPhone":newPhone,@"Md5Key":user.Md5Key} completion:^(NSDictionary *returnData) {
+        completion(returnData);
+    }];
 }
 
 @end

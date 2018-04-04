@@ -11,6 +11,7 @@
 #import "PersonVC_SheHui_Person.h"
 #import "PswVC_Person.h"
 #import "PhoneNumVC_Person.h"
+#import "PhoneNumChangeViewController.h"
 #import "SetVC_Person.h"
 @interface PersonViewController ()
 
@@ -40,7 +41,21 @@
     [self.navigationController pushViewController:psw animated:YES];
 }
 - (IBAction)phoneNumClick:(id)sender {
-    PhoneNumVC_Person * phone = [[PhoneNumVC_Person alloc]init];
+    UserMessage * user = USER;
+    id phone;
+    if (user.loginType == 1) {
+        if ([NSString isEmptyString:user.mobilePhone]) {
+            phone = [[PhoneNumVC_Person alloc]init];
+        } else {
+            phone = [[PhoneNumChangeViewController alloc]init];
+        }
+    } else {
+        if ([NSString isEmptyString:user.shehuiPHONE]) {
+            phone = [[PhoneNumVC_Person alloc]init];
+        } else {
+            phone = [[PhoneNumChangeViewController alloc]init];
+        }
+    }
     [self.navigationController pushViewController:phone animated:YES];
 }
 - (IBAction)setClick:(id)sender {

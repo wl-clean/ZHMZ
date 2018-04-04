@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YLHandle_WorkViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mx5-Nb-5iY">
+                    <rect key="frame" x="30" y="50" width="142.5" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Ain-tZ-wri"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                    <state key="normal" title="入户调查" image="入户调查">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="RHDC:" destination="-1" eventType="touchUpInside" id="s9Q-Ke-Is8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvk-Cu-EgX">
+                    <rect key="frame" x="202.5" y="50" width="142.5" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="1Jv-ye-YR7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                    <state key="normal" title="民主评议" image="民主评议">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="MZPY:" destination="-1" eventType="touchUpInside" id="QG6-p5-mce"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ed8-HH-Lb4">
+                    <rect key="frame" x="30" y="130" width="142.5" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="AwK-Iw-iHo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                    <state key="normal" title="审核公示" image="审核公示">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="SHGS:" destination="-1" eventType="touchUpInside" id="SQC-bd-uXg"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcc-Ig-j8Y">
+                    <rect key="frame" x="202.5" y="130" width="142.5" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="d98-Pg-RDp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                    <state key="normal" title="入户抽查" image="入户抽查">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="RHCC:" destination="-1" eventType="touchDragInside" id="xlK-IZ-nqR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjg-Vf-0M9">
+                    <rect key="frame" x="30" y="210" width="142.5" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="kQk-T5-i9z"/>
+                        <constraint firstAttribute="height" constant="50" id="tMW-or-TX4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                    <state key="normal" title="审批公示" image="审批公示">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="SPGS:" destination="-1" eventType="touchUpInside" id="0RY-mP-i7j"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lr2-IB-G7Q">
+                    <rect key="frame" x="202.5" y="210" width="142.5" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="4pP-JJ-G2j"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                    <state key="normal" title="电子档案" image="电子档案">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="DZDA:" destination="-1" eventType="touchUpInside" id="gCI-YD-lCe"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKi-nK-Eii">
+                    <rect key="frame" x="30" y="290" width="142.5" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Tfc-xn-i6B"/>
+                        <constraint firstAttribute="height" constant="50" id="bqK-5M-xus"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                    <state key="normal" title="贫困用户定位" image="贫困用户定位">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="PKYHDW:" destination="-1" eventType="touchUpInside" id="Vba-5h-Hof"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Kvk-Cu-EgX" firstAttribute="height" secondItem="mx5-Nb-5iY" secondAttribute="height" id="5Fh-5D-Jae"/>
+                <constraint firstItem="lr2-IB-G7Q" firstAttribute="top" secondItem="dcc-Ig-j8Y" secondAttribute="bottom" constant="30" id="5Sf-qB-iJk"/>
+                <constraint firstItem="lr2-IB-G7Q" firstAttribute="width" secondItem="mx5-Nb-5iY" secondAttribute="width" id="6pt-3E-waB"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="dcc-Ig-j8Y" secondAttribute="trailing" constant="30" id="7RF-NW-o0d"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Kvk-Cu-EgX" secondAttribute="trailing" constant="30" id="9AP-3i-DNM"/>
+                <constraint firstItem="mx5-Nb-5iY" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="30" id="AuP-fa-u7y"/>
+                <constraint firstItem="dcc-Ig-j8Y" firstAttribute="leading" secondItem="ed8-HH-Lb4" secondAttribute="trailing" constant="30" id="B5q-sy-m1b"/>
+                <constraint firstItem="Kvk-Cu-EgX" firstAttribute="width" secondItem="mx5-Nb-5iY" secondAttribute="width" id="DF8-Qj-71T"/>
+                <constraint firstItem="Kvk-Cu-EgX" firstAttribute="leading" secondItem="mx5-Nb-5iY" secondAttribute="trailing" constant="30" id="Iqf-Yu-NIp"/>
+                <constraint firstItem="IKi-nK-Eii" firstAttribute="height" secondItem="pjg-Vf-0M9" secondAttribute="height" id="L7j-kc-63P"/>
+                <constraint firstItem="IKi-nK-Eii" firstAttribute="top" secondItem="pjg-Vf-0M9" secondAttribute="bottom" constant="30" id="NTb-1Y-rHH"/>
+                <constraint firstItem="pjg-Vf-0M9" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="30" id="OFh-2L-Q40"/>
+                <constraint firstItem="pjg-Vf-0M9" firstAttribute="width" secondItem="mx5-Nb-5iY" secondAttribute="width" id="QkC-3D-ROc"/>
+                <constraint firstItem="ed8-HH-Lb4" firstAttribute="height" secondItem="mx5-Nb-5iY" secondAttribute="height" id="SvI-RD-hc5"/>
+                <constraint firstItem="Kvk-Cu-EgX" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="30" id="WP4-xB-VjV"/>
+                <constraint firstItem="ed8-HH-Lb4" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="30" id="Z8A-eV-ZnV"/>
+                <constraint firstItem="pjg-Vf-0M9" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="30" id="age-15-pHs"/>
+                <constraint firstItem="lr2-IB-G7Q" firstAttribute="height" secondItem="mx5-Nb-5iY" secondAttribute="height" id="eW4-Si-C2i"/>
+                <constraint firstItem="IKi-nK-Eii" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="30" id="g77-zR-BSA"/>
+                <constraint firstItem="pjg-Vf-0M9" firstAttribute="top" secondItem="ed8-HH-Lb4" secondAttribute="bottom" constant="30" id="iHc-cK-Myo"/>
+                <constraint firstItem="mx5-Nb-5iY" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="30" id="jc3-fT-oBj"/>
+                <constraint firstItem="IKi-nK-Eii" firstAttribute="width" secondItem="pjg-Vf-0M9" secondAttribute="width" id="kR7-uf-PXw"/>
+                <constraint firstItem="ed8-HH-Lb4" firstAttribute="top" secondItem="mx5-Nb-5iY" secondAttribute="bottom" constant="30" id="lGE-4o-BBd"/>
+                <constraint firstItem="pjg-Vf-0M9" firstAttribute="height" secondItem="mx5-Nb-5iY" secondAttribute="height" id="lVw-hd-jB7"/>
+                <constraint firstItem="dcc-Ig-j8Y" firstAttribute="top" secondItem="Kvk-Cu-EgX" secondAttribute="bottom" constant="30" id="le8-ej-GKx"/>
+                <constraint firstItem="pjg-Vf-0M9" firstAttribute="top" secondItem="ed8-HH-Lb4" secondAttribute="bottom" constant="30" id="p4A-F7-MHD"/>
+                <constraint firstItem="dcc-Ig-j8Y" firstAttribute="width" secondItem="mx5-Nb-5iY" secondAttribute="width" id="pEW-ZS-0Oh"/>
+                <constraint firstItem="lr2-IB-G7Q" firstAttribute="leading" secondItem="pjg-Vf-0M9" secondAttribute="trailing" constant="30" id="tt6-ka-DFP"/>
+                <constraint firstItem="ed8-HH-Lb4" firstAttribute="width" secondItem="mx5-Nb-5iY" secondAttribute="width" id="vgI-Ax-0Ae"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="lr2-IB-G7Q" secondAttribute="trailing" constant="30" id="vgs-Jt-Fqa"/>
+                <constraint firstItem="dcc-Ig-j8Y" firstAttribute="height" secondItem="mx5-Nb-5iY" secondAttribute="height" id="xS8-3W-ZBq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="入户抽查" width="31" height="31"/>
+        <image name="入户调查" width="31" height="31"/>
+        <image name="审批公示" width="31" height="31"/>
+        <image name="审核公示" width="31" height="31"/>
+        <image name="民主评议" width="31" height="31"/>
+        <image name="电子档案" width="31" height="31"/>
+        <image name="贫困用户定位" width="16" height="16"/>
+    </resources>
+</document>

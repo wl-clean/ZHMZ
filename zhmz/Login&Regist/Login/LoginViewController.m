@@ -142,8 +142,6 @@ static int top = 230;
         [self.workBtn setImage:[UIImage imageNamed:@"selectNo_login"] forState:UIControlStateNormal];
     }
     self.select = (int)sender.tag;
-    UserMessage * manager = USER;
-    manager.loginType = (int)sender.tag;
 }
 
 - (void)loginChonese:(UIButton *)sender {
@@ -154,7 +152,7 @@ static int top = 230;
             return;
         }
         [MBProgressHUD showMessag:@"请稍等" toView:self.view];
-        [RequsetManager loginWithDict:@{@"LoginName":self.userName.textField.text,@"PassWord":self.psw.textField.text,@"Md5Key":md5Code} completion:^(NSDictionary *returnData) {
+        [RequsetManager loginWithDict:@{@"LoginName":self.userName.textField.text,@"PassWord":self.psw.textField.text,@"Md5Key":md5Code} loginType:self.select completion:^(NSDictionary *returnData) {
             [MBProgressHUD hideHUDForView:self.view animated:YES];
             NSDictionary * error = returnData[@"Error"];
             if ([error[@"ErrorCode"] intValue]==0) {
@@ -163,14 +161,30 @@ static int top = 230;
                 NSArray * msgArr = dict[@"systemMsg"];
                 
                 UserMessage * user = USER;
-                user.realName = userDict[@"realName"];
-                user.personalId = userDict[@"personalId"];
-                user.mobilePhone = userDict[@"mobilePhone"];
-                user.officePhone = userDict[@"officePhone"];
-                user.orgCode = userDict[@"orgCode"];
-                user.email = userDict[@"email"];
-                user.departName = userDict[@"departName"];
+                if (user.loginType == 1) {
+                    //工作人员信息
+                    user.realName = userDict[@"realName"];
+                    user.personalId = userDict[@"personalId"];
+                    user.mobilePhone = userDict[@"mobilePhone"];
+                    user.officePhone = userDict[@"officePhone"];
+                    user.orgCode = userDict[@"orgCode"];
+                    user.email = userDict[@"email"];
+                    user.departName = userDict[@"departName"];
+                } else {
+                    //社会人员信息
+                    user.realName = dict[@"RealName"];
+                    user.shehuiADDRESS = dict[@"Address"];
+                    user.shehuiID = dict[@"Id"];
+                    user.shehuicardID = dict[@"Idcard"];
+                    user.shehuiPSW = dict[@"Password"];
+                    user.shehuiREGTIME = dict[@"RegTime"];
+                    user.shehuiSEX = dict[@"Sex"];
+                    user.shehuiPHONE = dict[@"Phone"];
+                }
+                user.loginType = self.select;
                 user.Md5Key = md5Code;
+                user.userName = self.userName.textField.text;
+                user.userPsw = self.psw.textField.text;
                 [USERDEFAULTS setObject:self.userName.textField.text forKey:USERNAME];
                 [USERDEFAULTS setObject:self.psw.textField.text forKey:PSW];
                 for (NSDictionary * dict in msgArr) {

@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0219B1D206F68DF00D4F464 /* YLMain_WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0219B1B206F68DF00D4F464 /* YLMain_WorkViewController.m */; };
+		C0219B1E206F68DF00D4F464 /* YLMain_WorkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0219B1C206F68DF00D4F464 /* YLMain_WorkViewController.xib */; };
+		C0219B22206F690000D4F464 /* YLSearch_WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0219B20206F690000D4F464 /* YLSearch_WorkViewController.m */; };
+		C0219B23206F690000D4F464 /* YLSearch_WorkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0219B21206F690000D4F464 /* YLSearch_WorkViewController.xib */; };
+		C0219B27206F691F00D4F464 /* YLHandle_WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0219B25206F691F00D4F464 /* YLHandle_WorkViewController.m */; };
+		C0219B28206F691F00D4F464 /* YLHandle_WorkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0219B26206F691F00D4F464 /* YLHandle_WorkViewController.xib */; };
+		C0219B2C206F693A00D4F464 /* YLStatistice_WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0219B2A206F693A00D4F464 /* YLStatistice_WorkViewController.m */; };
+		C0219B2D206F693A00D4F464 /* YLStatistice_WorkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0219B2B206F693A00D4F464 /* YLStatistice_WorkViewController.xib */; };
+		C0219B31206F694C00D4F464 /* YLMine_WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0219B2F206F694C00D4F464 /* YLMine_WorkViewController.m */; };
+		C0219B32206F694C00D4F464 /* YLMine_WorkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0219B30206F694C00D4F464 /* YLMine_WorkViewController.xib */; };
 		C06D56CB205EA8830020509A /* MainVC_SheHui_Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C06D56CA205EA8830020509A /* MainVC_SheHui_Person.m */; };
 		C06D56CE205EA8CD0020509A /* Message_SheHui_Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C06D56CD205EA8CD0020509A /* Message_SheHui_Person.m */; };
 		C06D56D1205EA8E70020509A /* Plan_SheHui_Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C06D56D0205EA8E70020509A /* Plan_SheHui_Person.m */; };
@@ -48,6 +58,8 @@
 		C09B746A20596A71006A0980 /* PhoneNumVC_Person.xib in Resources */ = {isa = PBXBuildFile; fileRef = C09B746820596A71006A0980 /* PhoneNumVC_Person.xib */; };
 		C09B746E20596A89006A0980 /* SetVC_Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C09B746C20596A89006A0980 /* SetVC_Person.m */; };
 		C09B746F20596A89006A0980 /* SetVC_Person.xib in Resources */ = {isa = PBXBuildFile; fileRef = C09B746D20596A89006A0980 /* SetVC_Person.xib */; };
+		C0A01B762072790100EE582F /* PhoneNumChangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A01B742072790100EE582F /* PhoneNumChangeViewController.m */; };
+		C0A01B772072790100EE582F /* PhoneNumChangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0A01B752072790100EE582F /* PhoneNumChangeViewController.xib */; };
 		C0E98F0A2054F76E00DA9BE3 /* NavigationController_Base.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E98F092054F76E00DA9BE3 /* NavigationController_Base.m */; };
 		C0E98F0E205507AE00DA9BE3 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E98F0D205507AE00DA9BE3 /* MBProgressHUD+Add.m */; };
 		C0E98F1120556FD700DA9BE3 /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E98F1020556FD700DA9BE3 /* ForgetViewController.m */; };
@@ -78,6 +90,21 @@
 /* Begin PBXFileReference section */
 		025AAD0E246B475A3AB30336 /* Pods-zhmz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zhmz.release.xcconfig"; path = "Pods/Target Support Files/Pods-zhmz/Pods-zhmz.release.xcconfig"; sourceTree = "<group>"; };
 		7EB3BDF0BE803BDBC8D459E9 /* libPods-zhmz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-zhmz.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0219B1A206F68DF00D4F464 /* YLMain_WorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLMain_WorkViewController.h; sourceTree = "<group>"; };
+		C0219B1B206F68DF00D4F464 /* YLMain_WorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLMain_WorkViewController.m; sourceTree = "<group>"; };
+		C0219B1C206F68DF00D4F464 /* YLMain_WorkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YLMain_WorkViewController.xib; sourceTree = "<group>"; };
+		C0219B1F206F690000D4F464 /* YLSearch_WorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLSearch_WorkViewController.h; sourceTree = "<group>"; };
+		C0219B20206F690000D4F464 /* YLSearch_WorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLSearch_WorkViewController.m; sourceTree = "<group>"; };
+		C0219B21206F690000D4F464 /* YLSearch_WorkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YLSearch_WorkViewController.xib; sourceTree = "<group>"; };
+		C0219B24206F691F00D4F464 /* YLHandle_WorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLHandle_WorkViewController.h; sourceTree = "<group>"; };
+		C0219B25206F691F00D4F464 /* YLHandle_WorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLHandle_WorkViewController.m; sourceTree = "<group>"; };
+		C0219B26206F691F00D4F464 /* YLHandle_WorkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YLHandle_WorkViewController.xib; sourceTree = "<group>"; };
+		C0219B29206F693A00D4F464 /* YLStatistice_WorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLStatistice_WorkViewController.h; sourceTree = "<group>"; };
+		C0219B2A206F693A00D4F464 /* YLStatistice_WorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLStatistice_WorkViewController.m; sourceTree = "<group>"; };
+		C0219B2B206F693A00D4F464 /* YLStatistice_WorkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YLStatistice_WorkViewController.xib; sourceTree = "<group>"; };
+		C0219B2E206F694C00D4F464 /* YLMine_WorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLMine_WorkViewController.h; sourceTree = "<group>"; };
+		C0219B2F206F694C00D4F464 /* YLMine_WorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLMine_WorkViewController.m; sourceTree = "<group>"; };
+		C0219B30206F694C00D4F464 /* YLMine_WorkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YLMine_WorkViewController.xib; sourceTree = "<group>"; };
 		C06D56C9205EA8830020509A /* MainVC_SheHui_Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainVC_SheHui_Person.h; sourceTree = "<group>"; };
 		C06D56CA205EA8830020509A /* MainVC_SheHui_Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainVC_SheHui_Person.m; sourceTree = "<group>"; };
 		C06D56CC205EA8CD0020509A /* Message_SheHui_Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Message_SheHui_Person.h; sourceTree = "<group>"; };
@@ -151,6 +178,9 @@
 		C09B746B20596A89006A0980 /* SetVC_Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetVC_Person.h; sourceTree = "<group>"; };
 		C09B746C20596A89006A0980 /* SetVC_Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetVC_Person.m; sourceTree = "<group>"; };
 		C09B746D20596A89006A0980 /* SetVC_Person.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetVC_Person.xib; sourceTree = "<group>"; };
+		C0A01B732072790100EE582F /* PhoneNumChangeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneNumChangeViewController.h; sourceTree = "<group>"; };
+		C0A01B742072790100EE582F /* PhoneNumChangeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneNumChangeViewController.m; sourceTree = "<group>"; };
+		C0A01B752072790100EE582F /* PhoneNumChangeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneNumChangeViewController.xib; sourceTree = "<group>"; };
 		C0E98F082054F76E00DA9BE3 /* NavigationController_Base.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationController_Base.h; sourceTree = "<group>"; };
 		C0E98F092054F76E00DA9BE3 /* NavigationController_Base.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationController_Base.m; sourceTree = "<group>"; };
 		C0E98F0C205507AE00DA9BE3 /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
@@ -231,6 +261,9 @@
 		C0219B11206D1F1100D4F464 /* YLMine */ = {
 			isa = PBXGroup;
 			children = (
+				C0219B2E206F694C00D4F464 /* YLMine_WorkViewController.h */,
+				C0219B2F206F694C00D4F464 /* YLMine_WorkViewController.m */,
+				C0219B30206F694C00D4F464 /* YLMine_WorkViewController.xib */,
 			);
 			path = YLMine;
 			sourceTree = "<group>";
@@ -238,6 +271,9 @@
 		C0219B12206D1F1100D4F464 /* YLSearch */ = {
 			isa = PBXGroup;
 			children = (
+				C0219B1F206F690000D4F464 /* YLSearch_WorkViewController.h */,
+				C0219B20206F690000D4F464 /* YLSearch_WorkViewController.m */,
+				C0219B21206F690000D4F464 /* YLSearch_WorkViewController.xib */,
 			);
 			path = YLSearch;
 			sourceTree = "<group>";
@@ -245,6 +281,9 @@
 		C0219B13206D1F1100D4F464 /* YLMain */ = {
 			isa = PBXGroup;
 			children = (
+				C0219B1A206F68DF00D4F464 /* YLMain_WorkViewController.h */,
+				C0219B1B206F68DF00D4F464 /* YLMain_WorkViewController.m */,
+				C0219B1C206F68DF00D4F464 /* YLMain_WorkViewController.xib */,
 			);
 			path = YLMain;
 			sourceTree = "<group>";
@@ -252,6 +291,9 @@
 		C0219B14206D1F1100D4F464 /* YLHandle */ = {
 			isa = PBXGroup;
 			children = (
+				C0219B24206F691F00D4F464 /* YLHandle_WorkViewController.h */,
+				C0219B25206F691F00D4F464 /* YLHandle_WorkViewController.m */,
+				C0219B26206F691F00D4F464 /* YLHandle_WorkViewController.xib */,
 			);
 			path = YLHandle;
 			sourceTree = "<group>";
@@ -259,6 +301,9 @@
 		C0219B15206D1F1100D4F464 /* YLStatistics */ = {
 			isa = PBXGroup;
 			children = (
+				C0219B29206F693A00D4F464 /* YLStatistice_WorkViewController.h */,
+				C0219B2A206F693A00D4F464 /* YLStatistice_WorkViewController.m */,
+				C0219B2B206F693A00D4F464 /* YLStatistice_WorkViewController.xib */,
 			);
 			path = YLStatistics;
 			sourceTree = "<group>";
@@ -609,6 +654,9 @@
 				C09B746620596A71006A0980 /* PhoneNumVC_Person.h */,
 				C09B746720596A71006A0980 /* PhoneNumVC_Person.m */,
 				C09B746820596A71006A0980 /* PhoneNumVC_Person.xib */,
+				C0A01B732072790100EE582F /* PhoneNumChangeViewController.h */,
+				C0A01B742072790100EE582F /* PhoneNumChangeViewController.m */,
+				C0A01B752072790100EE582F /* PhoneNumChangeViewController.xib */,
 			);
 			path = PhoneNum_Person;
 			sourceTree = "<group>";
@@ -773,17 +821,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0A01B772072790100EE582F /* PhoneNumChangeViewController.xib in Resources */,
 				C06D56DA205EB7FE0020509A /* Plan_SheHui_Person.xib in Resources */,
 				C09533922050DC480082F384 /* Main.storyboard in Resources */,
 				C095336A2050D03B0082F384 /* LaunchScreen.storyboard in Resources */,
+				C0219B1E206F68DF00D4F464 /* YLMain_WorkViewController.xib in Resources */,
 				C06D56DC205EB8180020509A /* Mine_SheHui_Person.xib in Resources */,
 				C06D56D6205EB74A0020509A /* MainVC_SheHui_Person.xib in Resources */,
 				C09533672050D03B0082F384 /* Assets.xcassets in Resources */,
 				C0E98F21205809D700DA9BE3 /* PersonViewController.xib in Resources */,
+				C0219B32206F694C00D4F464 /* YLMine_WorkViewController.xib in Resources */,
+				C0219B28206F691F00D4F464 /* YLHandle_WorkViewController.xib in Resources */,
+				C0219B2D206F693A00D4F464 /* YLStatistice_WorkViewController.xib in Resources */,
 				C09B746F20596A89006A0980 /* SetVC_Person.xib in Resources */,
 				C09B746520596A5B006A0980 /* PswVC_Person.xib in Resources */,
 				C0934DBA20629C4600E96D55 /* MainVC_SheHui_Person_Cell.xib in Resources */,
 				C09B746A20596A71006A0980 /* PhoneNumVC_Person.xib in Resources */,
+				C0219B23206F690000D4F464 /* YLSearch_WorkViewController.xib in Resources */,
 				C06D56D8205EB7D90020509A /* Message_SheHui_Person.xib in Resources */,
 				C0934DC12063EE6700E96D55 /* PersonVC_SheHui_Person.xib in Resources */,
 				C09B746020596A44006A0980 /* PersonVC_Person.xib in Resources */,
@@ -865,6 +919,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0A01B762072790100EE582F /* PhoneNumChangeViewController.m in Sources */,
 				C0934DC52063F35A00E96D55 /* UserMessage.m in Sources */,
 				C0934DCC20688EF500E96D55 /* RequsetManager.m in Sources */,
 				C09533A4205136D60082F384 /* UIView+Rect.m in Sources */,
@@ -874,14 +929,18 @@
 				C095339B2050E6210082F384 /* TextFiled_Login.m in Sources */,
 				C0E98F0A2054F76E00DA9BE3 /* NavigationController_Base.m in Sources */,
 				C09B746420596A5B006A0980 /* PswVC_Person.m in Sources */,
+				C0219B2C206F693A00D4F464 /* YLStatistice_WorkViewController.m in Sources */,
+				C0219B31206F694C00D4F464 /* YLMine_WorkViewController.m in Sources */,
 				C0E98F20205809D700DA9BE3 /* PersonViewController.m in Sources */,
 				C09533C32053C3FE0082F384 /* RegistViewController.m in Sources */,
+				C0219B27206F691F00D4F464 /* YLHandle_WorkViewController.m in Sources */,
 				C09533622050D03B0082F384 /* ViewController.m in Sources */,
 				C09533982050E5A10082F384 /* ViewController_Base.m in Sources */,
 				C06D56D1205EA8E70020509A /* Plan_SheHui_Person.m in Sources */,
 				C0E98F1B20561B3300DA9BE3 /* NewPSWViewController.m in Sources */,
 				C09B746E20596A89006A0980 /* SetVC_Person.m in Sources */,
 				C0934DC92067E5B800E96D55 /* HTTPManager.m in Sources */,
+				C0219B1D206F68DF00D4F464 /* YLMain_WorkViewController.m in Sources */,
 				C095336D2050D03B0082F384 /* main.m in Sources */,
 				C095335F2050D03B0082F384 /* AppDelegate.m in Sources */,
 				C06D56CE205EA8CD0020509A /* Message_SheHui_Person.m in Sources */,
@@ -892,6 +951,7 @@
 				C09533B420522EAF0082F384 /* CycleScrollView.m in Sources */,
 				C0934DB920629C4600E96D55 /* MainVC_SheHui_Person_Cell.m in Sources */,
 				C06D56D4205EA9070020509A /* Mine_SheHui_Person.m in Sources */,
+				C0219B22206F690000D4F464 /* YLSearch_WorkViewController.m in Sources */,
 				C09533B020521DFF0082F384 /* MainChooseController.m in Sources */,
 				C09B746920596A71006A0980 /* PhoneNumVC_Person.m in Sources */,
 				C06D56CB205EA8830020509A /* MainVC_SheHui_Person.m in Sources */,

@@ -16,11 +16,14 @@ typedef void(^ResultBlock)(NSDictionary *returnData);
 + (void)getOnlyCodeWithCompletion:(ResultBlock)completion;
 
 //登录
-+ (void)loginWithDict:(NSDictionary *)dict completion:(ResultBlock)completion;
++ (void)loginWithDict:(NSDictionary *)dict loginType:(int)loginType  completion:(ResultBlock)completion;
 
 //忘记密码
 + (void)forgetPswWithDict:(NSDictionary *)dict completion:(ResultBlock)completion;
 
 //获取权限
 + (void)getUserInfoWithAccount:(NSString *)account md5Key:(NSString *)md5Key completion:(ResultBlock)completion;
+
+//修改密码
++ (void)alterPswWithDict:(NSDictionary *)dict completion:(ResultBlock)completio;
 @end

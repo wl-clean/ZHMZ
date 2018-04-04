@@ -8,6 +8,7 @@
 
 #import "SetVC_Person.h"
 #import "LoginViewController.h"
+#import <AudioToolbox/AudioToolbox.h>
 @interface SetVC_Person ()
 
 @end
@@ -18,11 +19,17 @@
     [super viewDidLoad];
     self.title = @"设置";
 }
+- (IBAction)newSend:(id)sender {
+    
+}
 - (IBAction)soundSwitch:(id)sender {
+
 }
 - (IBAction)moveSwitch:(id)sender {
+
 }
 - (IBAction)quiteSwitch:(id)sender {
+    
 }
 - (IBAction)loginOut:(id)sender {
     LoginViewController  * loginView = [[LoginViewController alloc]init];

@@ -17,7 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"个人资料";
-    
+    UserMessage * user = USER;
+    if (![NSString isEmptyString:user.realName]) {
+        self.name.text = user.realName;
+    }    if (![NSString isEmptyString:user.shehuiSEX]) {
+        self.sex.text = user.shehuiSEX;
+    }    if (![NSString isEmptyString:user.shehuicardID]) {
+        self.cardID.text = user.shehuicardID;
+    }    if (![NSString isEmptyString:user.shehuiADDRESS]) {
+        self.address.text = user.shehuiADDRESS;
+    }    if (![NSString isEmptyString:user.shehuiPHONE]) {
+        self.phone.text = user.shehuiPHONE;
+    }
 }
 
 - (void)creatView {
@@ -26,6 +37,10 @@
     [btn addTarget:self action:@selector(fixPerson) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem * barBtn = [[UIBarButtonItem alloc]initWithCustomView:btn];
     self.navigationItem.rightBarButtonItem = barBtn;
+}
+
+- (void)fixPerson {
+    
 }
 
 @end
