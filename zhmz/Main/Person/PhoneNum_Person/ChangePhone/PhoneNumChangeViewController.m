@@ -7,7 +7,7 @@
 //
 
 #import "PhoneNumChangeViewController.h"
-
+#import "AddPhone.h"
 @interface PhoneNumChangeViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *phone;
 
@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"绑定手机号";
+    self.title = @"修改手机号";
     UserMessage * user = USER;
     if (user.loginType == 1) {
         self.phone.text = user.mobilePhone;
@@ -26,6 +26,7 @@
     }
 }
 - (IBAction)phoneChange:(id)sender {
+    
 }
 
 

@@ -31,7 +31,6 @@
 		C0934DC12063EE6700E96D55 /* PersonVC_SheHui_Person.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0934DBF2063EE6700E96D55 /* PersonVC_SheHui_Person.xib */; };
 		C0934DC52063F35A00E96D55 /* UserMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C0934DC42063F35A00E96D55 /* UserMessage.m */; };
 		C0934DC92067E5B800E96D55 /* HTTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C0934DC82067E5B800E96D55 /* HTTPManager.m */; };
-		C0934DCC20688EF500E96D55 /* RequsetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C0934DCB20688EF500E96D55 /* RequsetManager.m */; };
 		C0934DD32068986500E96D55 /* NSString+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = C0934DD22068986500E96D55 /* NSString+Add.m */; };
 		C095335F2050D03B0082F384 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C095335E2050D03B0082F384 /* AppDelegate.m */; };
 		C09533622050D03B0082F384 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C09533612050D03B0082F384 /* ViewController.m */; };
@@ -67,6 +66,9 @@
 		C0E98F1B20561B3300DA9BE3 /* NewPSWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E98F1A20561B3300DA9BE3 /* NewPSWViewController.m */; };
 		C0E98F20205809D700DA9BE3 /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E98F1E205809D700DA9BE3 /* PersonViewController.m */; };
 		C0E98F21205809D700DA9BE3 /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0E98F1F205809D700DA9BE3 /* PersonViewController.xib */; };
+		C0FE38542076174000C182F4 /* RequsetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C0934DCB20688EF500E96D55 /* RequsetManager.m */; };
+		C0FE385A207618E300C182F4 /* AddPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FE3858207618E300C182F4 /* AddPhone.m */; };
+		C0FE385B207618E300C182F4 /* AddPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0FE3859207618E300C182F4 /* AddPhone.xib */; };
 		D996E32A07D33F3DAFA4A896 /* libPods-zhmz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB3BDF0BE803BDBC8D459E9 /* libPods-zhmz.a */; };
 /* End PBXBuildFile section */
 
@@ -194,6 +196,9 @@
 		C0E98F1D205809D700DA9BE3 /* PersonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
 		C0E98F1E205809D700DA9BE3 /* PersonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
 		C0E98F1F205809D700DA9BE3 /* PersonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonViewController.xib; sourceTree = "<group>"; };
+		C0FE3857207618E300C182F4 /* AddPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddPhone.h; sourceTree = "<group>"; };
+		C0FE3858207618E300C182F4 /* AddPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddPhone.m; sourceTree = "<group>"; };
+		C0FE3859207618E300C182F4 /* AddPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPhone.xib; sourceTree = "<group>"; };
 		F1E1D079496D9604614C7483 /* Pods-zhmz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zhmz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zhmz/Pods-zhmz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -651,12 +656,8 @@
 		C09B745A205969EE006A0980 /* PhoneNum_Person */ = {
 			isa = PBXGroup;
 			children = (
-				C09B746620596A71006A0980 /* PhoneNumVC_Person.h */,
-				C09B746720596A71006A0980 /* PhoneNumVC_Person.m */,
-				C09B746820596A71006A0980 /* PhoneNumVC_Person.xib */,
-				C0A01B732072790100EE582F /* PhoneNumChangeViewController.h */,
-				C0A01B742072790100EE582F /* PhoneNumChangeViewController.m */,
-				C0A01B752072790100EE582F /* PhoneNumChangeViewController.xib */,
+				C0FE38562076185900C182F4 /* BindPhone */,
+				C0FE38552076185000C182F4 /* ChangePhone */,
 			);
 			path = PhoneNum_Person;
 			sourceTree = "<group>";
@@ -702,6 +703,29 @@
 				C0E98F1F205809D700DA9BE3 /* PersonViewController.xib */,
 			);
 			path = Person;
+			sourceTree = "<group>";
+		};
+		C0FE38552076185000C182F4 /* ChangePhone */ = {
+			isa = PBXGroup;
+			children = (
+				C0A01B732072790100EE582F /* PhoneNumChangeViewController.h */,
+				C0A01B742072790100EE582F /* PhoneNumChangeViewController.m */,
+				C0A01B752072790100EE582F /* PhoneNumChangeViewController.xib */,
+				C0FE3857207618E300C182F4 /* AddPhone.h */,
+				C0FE3858207618E300C182F4 /* AddPhone.m */,
+				C0FE3859207618E300C182F4 /* AddPhone.xib */,
+			);
+			path = ChangePhone;
+			sourceTree = "<group>";
+		};
+		C0FE38562076185900C182F4 /* BindPhone */ = {
+			isa = PBXGroup;
+			children = (
+				C09B746620596A71006A0980 /* PhoneNumVC_Person.h */,
+				C09B746720596A71006A0980 /* PhoneNumVC_Person.m */,
+				C09B746820596A71006A0980 /* PhoneNumVC_Person.xib */,
+			);
+			path = BindPhone;
 			sourceTree = "<group>";
 		};
 		EACE899A12558AAD200885A4 /* Frameworks */ = {
@@ -833,6 +857,7 @@
 				C0219B32206F694C00D4F464 /* YLMine_WorkViewController.xib in Resources */,
 				C0219B28206F691F00D4F464 /* YLHandle_WorkViewController.xib in Resources */,
 				C0219B2D206F693A00D4F464 /* YLStatistice_WorkViewController.xib in Resources */,
+				C0FE385B207618E300C182F4 /* AddPhone.xib in Resources */,
 				C09B746F20596A89006A0980 /* SetVC_Person.xib in Resources */,
 				C09B746520596A5B006A0980 /* PswVC_Person.xib in Resources */,
 				C0934DBA20629C4600E96D55 /* MainVC_SheHui_Person_Cell.xib in Resources */,
@@ -921,7 +946,6 @@
 			files = (
 				C0A01B762072790100EE582F /* PhoneNumChangeViewController.m in Sources */,
 				C0934DC52063F35A00E96D55 /* UserMessage.m in Sources */,
-				C0934DCC20688EF500E96D55 /* RequsetManager.m in Sources */,
 				C09533A4205136D60082F384 /* UIView+Rect.m in Sources */,
 				C09B745F20596A44006A0980 /* PersonVC_Person.m in Sources */,
 				C0E98F1120556FD700DA9BE3 /* ForgetViewController.m in Sources */,
@@ -936,6 +960,7 @@
 				C0219B27206F691F00D4F464 /* YLHandle_WorkViewController.m in Sources */,
 				C09533622050D03B0082F384 /* ViewController.m in Sources */,
 				C09533982050E5A10082F384 /* ViewController_Base.m in Sources */,
+				C0FE385A207618E300C182F4 /* AddPhone.m in Sources */,
 				C06D56D1205EA8E70020509A /* Plan_SheHui_Person.m in Sources */,
 				C0E98F1B20561B3300DA9BE3 /* NewPSWViewController.m in Sources */,
 				C09B746E20596A89006A0980 /* SetVC_Person.m in Sources */,
@@ -953,6 +978,7 @@
 				C06D56D4205EA9070020509A /* Mine_SheHui_Person.m in Sources */,
 				C0219B22206F690000D4F464 /* YLSearch_WorkViewController.m in Sources */,
 				C09533B020521DFF0082F384 /* MainChooseController.m in Sources */,
+				C0FE38542076174000C182F4 /* RequsetManager.m in Sources */,
 				C09B746920596A71006A0980 /* PhoneNumVC_Person.m in Sources */,
 				C06D56CB205EA8830020509A /* MainVC_SheHui_Person.m in Sources */,
 				C09533BD2053C1A10082F384 /* LoginViewController.m in Sources */,

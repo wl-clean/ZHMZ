@@ -12,6 +12,7 @@
 typedef void(^ResultBlock)(NSDictionary *returnData);
 
 @interface RequsetManager : NSObject
+
 //获取唯一ID接口
 + (void)getOnlyCodeWithCompletion:(ResultBlock)completion;
 

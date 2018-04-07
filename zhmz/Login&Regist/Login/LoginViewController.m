@@ -197,6 +197,12 @@ static int top = 230;
                     }
                 }
                 
+                user.messageSend = [USERDEFAULTS boolForKey:MESSAGESEND];
+                user.sound = [USERDEFAULTS boolForKey:SOUND];
+                user.move = [USERDEFAULTS boolForKey:MOVE];
+                user.trouble = [USERDEFAULTS boolForKey:TROUBLE];
+                
+                
                 MainChooseController * main = [[MainChooseController alloc]init];
                 [self.navigationController pushViewController:main animated:YES];
                 NavigationController_Base * nav = [[NavigationController_Base alloc]initWithRootViewController:main];

@@ -16,23 +16,43 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    NSArray *array=[[NSBundle mainBundle]loadNibNamed:@"YLHandle_WorkViewController" owner:nil options:nil];
+    NSLog(@"%@",array);
+    UserMessage * user = USER;
+    if (user.regionLevel == 10101005) {
+        
+    } else if (user.regionLevel == 10101004) {
+        
+    } else {
+        
+    }
+    
 }
 
-- (IBAction)RHDC:(id)sender {
+//乡镇XIB
+- (IBAction)DCHS:(id)sender {
 }
 - (IBAction)MZPY:(id)sender {
 }
 - (IBAction)SHGS:(id)sender {
 }
+- (IBAction)DZDA:(id)sender {
+}
+- (IBAction)LXSJ:(id)sender {
+}
+
+//区县XIB
 - (IBAction)RHCC:(id)sender {
 }
 - (IBAction)SPGS:(id)sender {
 }
-- (IBAction)DZDA:(id)sender {
+- (IBAction)LXSJ_QX:(id)sender {
 }
-- (IBAction)PKYHDW:(id)sender {
+- (IBAction)DZDA_QX:(id)sender {
 }
 
+//其他XIB
+- (IBAction)DZDA_QT:(id)sender {
+}
 
 @end

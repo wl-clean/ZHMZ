@@ -29,9 +29,12 @@
 
 #define USER [UserMessage userMessage];
 #define USERDEFAULTS [NSUserDefaults standardUserDefaults]
-#define USERNAME @"userNameStr"
-#define PSW @"pswStr"
-
+#define USERNAME @"userNameStr"//账户
+#define PSW @"pswStr"//密码
+#define MESSAGESEND @"messageSend"//新消息通知
+#define SOUND @"sound"//声音
+#define MOVE @"move"//震动
+#define TROUBLE @"trouble"//免打扰
 
 
 //工作人员

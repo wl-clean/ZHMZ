@@ -42,7 +42,7 @@
 }
 
 + (void)getUserInfoWithAccount:(NSString *)account md5Key:(NSString *)md5Key completion:(ResultBlock)completion {
-    [HTTPManager post:WORKURL(@"SocietySalvation/api/appCommonController.do?getUserInfo") parameters:@{@"username":account,@"Md5Key":md5Key} completion:^(NSDictionary *returnData) {
+    [HTTPManager post:WORKURL(@"SocietySalvation/api/appCommonController.do?getUserInfo") parameters:@{@"username":account,@"ip":@"222.222.49.34:9095",@"Md5Key":md5Key} completion:^(NSDictionary *returnData) {
         completion(returnData);
     }];
 }
@@ -58,6 +58,22 @@
     [HTTPManager
      post:path
      parameters:dict
+     completion:^(NSDictionary *returnData) {
+         completion(returnData);
+     }];
+}
+
++ (void)bindPhoneWithPhone:(NSString *)phone completion:(ResultBlock)completion {
+    UserMessage * user = USER;
+    NSString * path;
+    if (user.loginType == 1) {
+        path = WORKURL(@"SalvationPlatform/phoneLoginController.do?bindingPhone");
+    } else {
+        path = SHURL(@"");
+    }
+    [HTTPManager
+     post:path
+     parameters:@{@"LoginName":user.userName,@"PassWord":user.userPsw,@"phone":phone,@"Md5Key":user.Md5Key}
      completion:^(NSDictionary *returnData) {
          completion(returnData);
      }];

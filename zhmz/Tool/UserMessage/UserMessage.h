@@ -37,7 +37,7 @@
 
 
 @property(nonatomic,copy)NSString * Md5Key;//合法性校验字段
-@property(nonatomic,copy)NSString * regionLevel;//权限等级
+@property(nonatomic,assign)int regionLevel;//权限等级
 
 @property(nonatomic,copy)NSString * jzAccount;//救助确认字段
 @property(nonatomic,copy)NSString * hdAccount;//核对确认字段
@@ -48,10 +48,10 @@
 @property(nonatomic,copy)NSString * yzsResultIp;//一站式ip
 @property(nonatomic,strong)NSMutableArray * arrIp;//ip数组  暂时没用
 
-@property(nonatomic,copy)NSString * messageSend;//新消息通知是否开启
-@property(nonatomic,copy)NSString * sound;//声音
-@property(nonatomic,copy)NSString * move;//震动
-
+@property(nonatomic,assign)BOOL messageSend;//新消息通知是否开启
+@property(nonatomic,assign)BOOL sound;//声音
+@property(nonatomic,assign)BOOL move;//震动
+@property(nonatomic,assign)BOOL trouble;//打扰模式
 
 + (id)userMessage;
 @end

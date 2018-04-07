@@ -27,12 +27,12 @@
         [RequsetManager
          alterPswWithDict:dict
          completion:^(NSDictionary *returnData) {
-             NSString * errorCode = returnData[@"Error"][@"ErrorCode"];
-             if ([errorCode isEqualToString:@"0"]) {
-                 [MBProgressHUD showError:returnData[@"Error"][@"ErrorMessage"] toView:self.view];
+             NSNumber * errorCode = returnData[@"Error"][@"ErrorCode"];
+             if (errorCode == 0) {
+                 [MBProgressHUD showError:@"错误" toView:self.view];
                  [self performSelector:@selector(popBack) withObject:self afterDelay:0.5];
              } else {
-                 [MBProgressHUD showError:returnData[@"Error"][@"ErrorMessage"] toView:self.view];
+                 [MBProgressHUD showError:@"错误" toView:self.view];
              }
         }];
     } else {
